@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using System.Data;
+using System.Windows.Forms;
 
 namespace FormUI
 
@@ -23,11 +24,13 @@ namespace FormUI
         }
 
      
-public void InsertAutko(string marka_x, int rok_x, string kolor_x, string Naped_4x4_x)
+public void InsertAutko(string marka_x,int rok_x, string kolor_x, string Naped_4x4_x)
 {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Support.CnnVal("Pew")))
                 {
                 Autko newAutko = new Autko { marka = marka_x, rok = rok_x, kolor = kolor_x, Naped_4x4 = Naped_4x4_x };
+
+
                 }
 
 
@@ -43,6 +46,11 @@ public void InsertAutko(string marka_x, int rok_x, string kolor_x, string Naped_
            */
                 throw new NotImplementedException();
    }
-}
+
+        internal void InsertAutko(string text1, TextBox okno_rok, string text2, string text3)
+        {
+            throw new NotImplementedException();
+        }
+    }
     }
 

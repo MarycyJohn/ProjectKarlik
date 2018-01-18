@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.peopleFoundListbox = new System.Windows.Forms.ListBox();
+            this.okno_wynik = new System.Windows.Forms.ListBox();
             this.okno_szukaj = new System.Windows.Forms.TextBox();
-            this.lastNameLabel = new System.Windows.Forms.Label();
-            this.searchButton = new System.Windows.Forms.Button();
+            this.Wprowadz_marke = new System.Windows.Forms.Label();
+            this.Guzik_szukaj = new System.Windows.Forms.Button();
             this.nazwa_marka = new System.Windows.Forms.Label();
             this.okno_marka = new System.Windows.Forms.TextBox();
             this.nazwa_rok = new System.Windows.Forms.Label();
@@ -40,45 +40,46 @@
             this.okno_kolor = new System.Windows.Forms.TextBox();
             this.nazwa_naped = new System.Windows.Forms.Label();
             this.okno_naped = new System.Windows.Forms.TextBox();
-            this.insertRecordButton = new System.Windows.Forms.Button();
             this.Guzik_dodak = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // peopleFoundListbox
+            // okno_wynik
             // 
-            this.peopleFoundListbox.FormattingEnabled = true;
-            this.peopleFoundListbox.ItemHeight = 25;
-            this.peopleFoundListbox.Location = new System.Drawing.Point(21, 145);
-            this.peopleFoundListbox.Name = "peopleFoundListbox";
-            this.peopleFoundListbox.Size = new System.Drawing.Size(736, 154);
-            this.peopleFoundListbox.TabIndex = 0;
+            this.okno_wynik.FormattingEnabled = true;
+            this.okno_wynik.ItemHeight = 25;
+            this.okno_wynik.Location = new System.Drawing.Point(21, 145);
+            this.okno_wynik.Name = "okno_wynik";
+            this.okno_wynik.Size = new System.Drawing.Size(736, 154);
+            this.okno_wynik.TabIndex = 0;
+            this.okno_wynik.SelectedIndexChanged += new System.EventHandler(this.okno_wynik_SelectedIndexChanged);
             // 
             // okno_szukaj
             // 
-            this.okno_szukaj.Location = new System.Drawing.Point(159, 50);
+            this.okno_szukaj.Location = new System.Drawing.Point(222, 53);
             this.okno_szukaj.Name = "okno_szukaj";
             this.okno_szukaj.Size = new System.Drawing.Size(197, 31);
             this.okno_szukaj.TabIndex = 1;
             this.okno_szukaj.TextChanged += new System.EventHandler(this.lastNameText_TextChanged);
             // 
-            // lastNameLabel
+            // Wprowadz_marke
             // 
-            this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(38, 53);
-            this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(115, 25);
-            this.lastNameLabel.TabIndex = 2;
-            this.lastNameLabel.Text = "Last Name";
+            this.Wprowadz_marke.AutoSize = true;
+            this.Wprowadz_marke.Location = new System.Drawing.Point(38, 53);
+            this.Wprowadz_marke.Name = "Wprowadz_marke";
+            this.Wprowadz_marke.Size = new System.Drawing.Size(178, 25);
+            this.Wprowadz_marke.TabIndex = 2;
+            this.Wprowadz_marke.Text = "Wprowadź markę";
+            this.Wprowadz_marke.Click += new System.EventHandler(this.Wprowadz_marke_Click);
             // 
-            // searchButton
+            // Guzik_szukaj
             // 
-            this.searchButton.Location = new System.Drawing.Point(362, 44);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(133, 42);
-            this.searchButton.TabIndex = 3;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            this.Guzik_szukaj.Location = new System.Drawing.Point(425, 47);
+            this.Guzik_szukaj.Name = "Guzik_szukaj";
+            this.Guzik_szukaj.Size = new System.Drawing.Size(133, 42);
+            this.Guzik_szukaj.TabIndex = 3;
+            this.Guzik_szukaj.Text = "Search";
+            this.Guzik_szukaj.UseVisualStyleBackColor = true;
+            this.Guzik_szukaj.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // nazwa_marka
             // 
@@ -96,6 +97,7 @@
             this.okno_marka.Name = "okno_marka";
             this.okno_marka.Size = new System.Drawing.Size(197, 31);
             this.okno_marka.TabIndex = 4;
+            this.okno_marka.TextChanged += new System.EventHandler(this.okno_marka_TextChanged);
             // 
             // nazwa_rok
             // 
@@ -112,7 +114,7 @@
             this.okno_rok.Name = "okno_rok";
             this.okno_rok.Size = new System.Drawing.Size(197, 31);
             this.okno_rok.TabIndex = 6;
-            this.okno_rok.TextChanged += new System.EventHandler(this.lastNameInsText_TextChanged);
+            this.okno_rok.TextChanged += new System.EventHandler(this.okno_rok_TextChanged);
             // 
             // nazwa_kolor
             // 
@@ -129,6 +131,7 @@
             this.okno_kolor.Name = "okno_kolor";
             this.okno_kolor.Size = new System.Drawing.Size(197, 31);
             this.okno_kolor.TabIndex = 8;
+            this.okno_kolor.TextChanged += new System.EventHandler(this.okno_kolor_TextChanged);
             // 
             // nazwa_naped
             // 
@@ -145,13 +148,7 @@
             this.okno_naped.Name = "okno_naped";
             this.okno_naped.Size = new System.Drawing.Size(197, 31);
             this.okno_naped.TabIndex = 10;
-            // 
-            // insertRecordButton
-            // 
-            this.insertRecordButton.Location = new System.Drawing.Point(0, 0);
-            this.insertRecordButton.Name = "insertRecordButton";
-            this.insertRecordButton.Size = new System.Drawing.Size(75, 23);
-            this.insertRecordButton.TabIndex = 0;
+            this.okno_naped.TextChanged += new System.EventHandler(this.okno_naped_TextChanged);
             // 
             // Guzik_dodak
             // 
@@ -169,7 +166,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 591);
             this.Controls.Add(this.Guzik_dodak);
-            this.Controls.Add(this.insertRecordButton);
             this.Controls.Add(this.nazwa_naped);
             this.Controls.Add(this.okno_naped);
             this.Controls.Add(this.nazwa_kolor);
@@ -178,10 +174,10 @@
             this.Controls.Add(this.okno_rok);
             this.Controls.Add(this.nazwa_marka);
             this.Controls.Add(this.okno_marka);
-            this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.lastNameLabel);
+            this.Controls.Add(this.Guzik_szukaj);
+            this.Controls.Add(this.Wprowadz_marke);
             this.Controls.Add(this.okno_szukaj);
-            this.Controls.Add(this.peopleFoundListbox);
+            this.Controls.Add(this.okno_wynik);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Dashboard";
@@ -193,10 +189,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox peopleFoundListbox;
+        private System.Windows.Forms.ListBox okno_wynik;
         private System.Windows.Forms.TextBox okno_szukaj;
-        private System.Windows.Forms.Label lastNameLabel;
-        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Label Wprowadz_marke;
+        private System.Windows.Forms.Button Guzik_szukaj;
         private System.Windows.Forms.Label nazwa_marka;
         private System.Windows.Forms.TextBox okno_marka;
         private System.Windows.Forms.Label nazwa_rok;
@@ -205,7 +201,6 @@
         private System.Windows.Forms.TextBox okno_kolor;
         private System.Windows.Forms.Label nazwa_naped;
         private System.Windows.Forms.TextBox okno_naped;
-        private System.Windows.Forms.Button insertRecordButton;
         private System.Windows.Forms.Button Guzik_dodak;
     }
 }

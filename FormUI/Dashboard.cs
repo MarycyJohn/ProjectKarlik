@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,8 +24,8 @@ namespace FormUI
 
         private void UpdateBinding()
         {
-            peopleFoundListbox.DataSource = auto;
-            peopleFoundListbox.DisplayMember = "FullInfo";
+            okno_wynik.DataSource = auto;
+            okno_wynik.DisplayMember = "FullInfo";
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace FormUI
             phoneNumberInsText.Text = "";
         }
         */
+        
         private void lastNameText_TextChanged(object sender, EventArgs e)
         {
 
@@ -58,34 +60,81 @@ namespace FormUI
 
         }
 
+
+        /*
         private void lastNameInsText_TextChanged(object sender, EventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8)
-            {
-
-
-                e.Handled = false;
-
-            }
-            else
-            {
-                MessageBox.Show("Prosze wprowadzic jedynie rok.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) &&
+                ch != Convert.ToChar(Keys.Back) &&
+                    ch != Convert.ToChar(Keys.Delete))
                 e.Handled = true;
 
+        }*/
+
+/*
+        private void lastNameInsText_TextChanged(object sender, KeyEventArgs e)
+        {
+            // Rejects any keys not in the range of 0-9 (by ASCII number),
+            //   the Delete key or the Back key
+            if ((e.KeyValue < 48 || e.KeyValue > 57) && e.KeyCode != Keys.Delete
+                         && e.KeyCode != Keys.Back)
+            {
+                e.SuppressKeyPress = true;
+                SystemSounds.Beep.Play();
             }
+        }
+        */
+
+        private void okno_rok_TextChanged(object sender, EventArgs e)
+        {
 
         }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+
 
         private void Guzik_dodak_Click(object sender, EventArgs e)
         {
             Dostep db = new Dostep();
 
-            db.InsertAutko(okno_marka.Text, okno_rok.Text, okno_kolor.Text, okno_naped.Text);
+            db.InsertAutko(okno_marka.Text, okno_rok, okno_kolor.Text, okno_naped.Text);
 
             okno_marka.Text = "";
             okno_rok.Text = "";
             okno_kolor.Text = "";
             okno_naped.Text = "";
+        }
+
+        private void okno_marka_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void okno_kolor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void okno_naped_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void okno_wynik_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Wprowadz_marke_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
