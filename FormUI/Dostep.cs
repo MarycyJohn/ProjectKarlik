@@ -17,23 +17,24 @@ namespace FormUI
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Support.CnnVal("Pew")))
             {
                 //var output = connection.Query<Autko>($"select * from auta where marka = '{ marka }'").ToList();
-                var output = connection.Query<Autko>("dbo.Autka_marki @marka", new { marka = marka }).ToList(); 
+                var output = connection.Query<Autko>("dbo.Autka_marki @marka", new { marka = marka }).ToList();
                 //używam procedury autka_marki zamiast konkretnego polecenia sql
                 return output;
-            } 
+            }
         }
 
-     
-public void InsertAutko(string marka_x,int rok_x, string kolor_x, string Naped_4x4_x)
-{
+
+        public void InsertAutko(string marka_x, string rok_x, string kolor_x, string Naped_4x4_x)
+        {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Support.CnnVal("Pew")))
-                {
-                Autko newAutko = new Autko { marka = marka_x, rok = rok_x, kolor = kolor_x, Naped_4x4 = Naped_4x4_x };
-
-
-                }
-
-
+            {
+                //Autko newAutko = new Autko { marka = marka_x, rok = rok_x, kolor = kolor_x, Naped_4x4 = Naped_4x4_x };
+                List<Autko> auto = new List<Autko>();
+                auto.Add(new Autko { marka = marka_x, rok = rok_x, kolor = kolor_x, Naped_4x4 = Naped_4x4_x });
+                connection.Execute("dbo.Autka_wprowadz @Marka, @Rok, @Kolor, @Naped_4x4", auto);
+            }
+        }
+    } }
                 /*
        using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Support.CnnVal("Pew")))
        {
@@ -43,14 +44,14 @@ public void InsertAutko(string marka_x,int rok_x, string kolor_x, string Naped_4
            people.Add(new Autko { marka = marka_x, rok = rok_x, kolor = kolor_x, Naped_4x4 = Naped_4x4_x });
 
            connection.Execute("dbo.People_Insert @FirstName, @LastName, @EmailAddress, @PhoneNumber", people);
-           */
+           
                 throw new NotImplementedException();
    }
-
+        
         internal void InsertAutko(string text1, TextBox okno_rok, string text2, string text3)
         {
             throw new NotImplementedException();
-        }
-    }
-    }
+        }*/
+    
+    
 

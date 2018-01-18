@@ -104,7 +104,7 @@ namespace FormUI
         {
             Dostep db = new Dostep();
 
-            db.InsertAutko(okno_marka.Text, okno_rok, okno_kolor.Text, okno_naped.Text);
+            db.InsertAutko(okno_marka.Text, okno_rok.Text, okno_kolor.Text, okno_naped.Text);
 
             okno_marka.Text = "";
             okno_rok.Text = "";

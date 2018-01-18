@@ -10,7 +10,7 @@ namespace FormUI
     {
         public int id { get; set; }
         public string marka { get; set; }
-        public int rok { get; set; }
+        public string rok { get; set; }
         public string kolor { get; set; }
         public string Naped_4x4 { get; set; }
         
