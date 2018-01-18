@@ -32,15 +32,16 @@
             this.okno_szukaj = new System.Windows.Forms.TextBox();
             this.lastNameLabel = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
-            this.firstNameInsLabel = new System.Windows.Forms.Label();
-            this.firstNameInsText = new System.Windows.Forms.TextBox();
-            this.lastNameInsLabel = new System.Windows.Forms.Label();
-            this.lastNameInsText = new System.Windows.Forms.TextBox();
-            this.emailAddressInsLabel = new System.Windows.Forms.Label();
-            this.emailAddressInsText = new System.Windows.Forms.TextBox();
-            this.phoneNumberInsLabel = new System.Windows.Forms.Label();
-            this.phoneNumberInsText = new System.Windows.Forms.TextBox();
+            this.nazwa_marka = new System.Windows.Forms.Label();
+            this.okno_marka = new System.Windows.Forms.TextBox();
+            this.nazwa_rok = new System.Windows.Forms.Label();
+            this.okno_rok = new System.Windows.Forms.TextBox();
+            this.nazwa_kolor = new System.Windows.Forms.Label();
+            this.okno_kolor = new System.Windows.Forms.TextBox();
+            this.nazwa_naped = new System.Windows.Forms.Label();
+            this.okno_naped = new System.Windows.Forms.TextBox();
             this.insertRecordButton = new System.Windows.Forms.Button();
+            this.Guzik_dodak = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // peopleFoundListbox
@@ -49,7 +50,7 @@
             this.peopleFoundListbox.ItemHeight = 25;
             this.peopleFoundListbox.Location = new System.Drawing.Point(21, 145);
             this.peopleFoundListbox.Name = "peopleFoundListbox";
-            this.peopleFoundListbox.Size = new System.Drawing.Size(573, 154);
+            this.peopleFoundListbox.Size = new System.Drawing.Size(736, 154);
             this.peopleFoundListbox.TabIndex = 0;
             // 
             // okno_szukaj
@@ -71,7 +72,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(115, 87);
+            this.searchButton.Location = new System.Drawing.Point(362, 44);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(133, 42);
             this.searchButton.TabIndex = 3;
@@ -79,69 +80,71 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // firstNameInsLabel
+            // nazwa_marka
             // 
-            this.firstNameInsLabel.AutoSize = true;
-            this.firstNameInsLabel.Location = new System.Drawing.Point(38, 356);
-            this.firstNameInsLabel.Name = "firstNameInsLabel";
-            this.firstNameInsLabel.Size = new System.Drawing.Size(116, 25);
-            this.firstNameInsLabel.TabIndex = 5;
-            this.firstNameInsLabel.Text = "First Name";
+            this.nazwa_marka.AutoSize = true;
+            this.nazwa_marka.Location = new System.Drawing.Point(38, 356);
+            this.nazwa_marka.Name = "nazwa_marka";
+            this.nazwa_marka.Size = new System.Drawing.Size(72, 25);
+            this.nazwa_marka.TabIndex = 5;
+            this.nazwa_marka.Text = "Marka";
+            this.nazwa_marka.Click += new System.EventHandler(this.firstNameInsLabel_Click);
             // 
-            // firstNameInsText
+            // okno_marka
             // 
-            this.firstNameInsText.Location = new System.Drawing.Point(204, 353);
-            this.firstNameInsText.Name = "firstNameInsText";
-            this.firstNameInsText.Size = new System.Drawing.Size(197, 31);
-            this.firstNameInsText.TabIndex = 4;
+            this.okno_marka.Location = new System.Drawing.Point(254, 350);
+            this.okno_marka.Name = "okno_marka";
+            this.okno_marka.Size = new System.Drawing.Size(197, 31);
+            this.okno_marka.TabIndex = 4;
             // 
-            // lastNameInsLabel
+            // nazwa_rok
             // 
-            this.lastNameInsLabel.AutoSize = true;
-            this.lastNameInsLabel.Location = new System.Drawing.Point(38, 393);
-            this.lastNameInsLabel.Name = "lastNameInsLabel";
-            this.lastNameInsLabel.Size = new System.Drawing.Size(115, 25);
-            this.lastNameInsLabel.TabIndex = 7;
-            this.lastNameInsLabel.Text = "Last Name";
+            this.nazwa_rok.AutoSize = true;
+            this.nazwa_rok.Location = new System.Drawing.Point(38, 393);
+            this.nazwa_rok.Name = "nazwa_rok";
+            this.nazwa_rok.Size = new System.Drawing.Size(42, 25);
+            this.nazwa_rok.TabIndex = 7;
+            this.nazwa_rok.Text = "rok";
             // 
-            // lastNameInsText
+            // okno_rok
             // 
-            this.lastNameInsText.Location = new System.Drawing.Point(204, 390);
-            this.lastNameInsText.Name = "lastNameInsText";
-            this.lastNameInsText.Size = new System.Drawing.Size(197, 31);
-            this.lastNameInsText.TabIndex = 6;
+            this.okno_rok.Location = new System.Drawing.Point(254, 387);
+            this.okno_rok.Name = "okno_rok";
+            this.okno_rok.Size = new System.Drawing.Size(197, 31);
+            this.okno_rok.TabIndex = 6;
+            this.okno_rok.TextChanged += new System.EventHandler(this.lastNameInsText_TextChanged);
             // 
-            // emailAddressInsLabel
+            // nazwa_kolor
             // 
-            this.emailAddressInsLabel.AutoSize = true;
-            this.emailAddressInsLabel.Location = new System.Drawing.Point(38, 430);
-            this.emailAddressInsLabel.Name = "emailAddressInsLabel";
-            this.emailAddressInsLabel.Size = new System.Drawing.Size(150, 25);
-            this.emailAddressInsLabel.TabIndex = 9;
-            this.emailAddressInsLabel.Text = "Email Address";
+            this.nazwa_kolor.AutoSize = true;
+            this.nazwa_kolor.Location = new System.Drawing.Point(38, 430);
+            this.nazwa_kolor.Name = "nazwa_kolor";
+            this.nazwa_kolor.Size = new System.Drawing.Size(59, 25);
+            this.nazwa_kolor.TabIndex = 9;
+            this.nazwa_kolor.Text = "kolor";
             // 
-            // emailAddressInsText
+            // okno_kolor
             // 
-            this.emailAddressInsText.Location = new System.Drawing.Point(204, 427);
-            this.emailAddressInsText.Name = "emailAddressInsText";
-            this.emailAddressInsText.Size = new System.Drawing.Size(197, 31);
-            this.emailAddressInsText.TabIndex = 8;
+            this.okno_kolor.Location = new System.Drawing.Point(254, 424);
+            this.okno_kolor.Name = "okno_kolor";
+            this.okno_kolor.Size = new System.Drawing.Size(197, 31);
+            this.okno_kolor.TabIndex = 8;
             // 
-            // phoneNumberInsLabel
+            // nazwa_naped
             // 
-            this.phoneNumberInsLabel.AutoSize = true;
-            this.phoneNumberInsLabel.Location = new System.Drawing.Point(38, 467);
-            this.phoneNumberInsLabel.Name = "phoneNumberInsLabel";
-            this.phoneNumberInsLabel.Size = new System.Drawing.Size(155, 25);
-            this.phoneNumberInsLabel.TabIndex = 11;
-            this.phoneNumberInsLabel.Text = "Phone Number";
+            this.nazwa_naped.AutoSize = true;
+            this.nazwa_naped.Location = new System.Drawing.Point(38, 467);
+            this.nazwa_naped.Name = "nazwa_naped";
+            this.nazwa_naped.Size = new System.Drawing.Size(210, 25);
+            this.nazwa_naped.TabIndex = 11;
+            this.nazwa_naped.Text = "Napęd 4x4 (Tak/Nie)";
             // 
-            // phoneNumberInsText
+            // okno_naped
             // 
-            this.phoneNumberInsText.Location = new System.Drawing.Point(204, 464);
-            this.phoneNumberInsText.Name = "phoneNumberInsText";
-            this.phoneNumberInsText.Size = new System.Drawing.Size(197, 31);
-            this.phoneNumberInsText.TabIndex = 10;
+            this.okno_naped.Location = new System.Drawing.Point(254, 461);
+            this.okno_naped.Name = "okno_naped";
+            this.okno_naped.Size = new System.Drawing.Size(197, 31);
+            this.okno_naped.TabIndex = 10;
             // 
             // insertRecordButton
             // 
@@ -150,20 +153,31 @@
             this.insertRecordButton.Size = new System.Drawing.Size(75, 23);
             this.insertRecordButton.TabIndex = 0;
             // 
+            // Guzik_dodak
+            // 
+            this.Guzik_dodak.Location = new System.Drawing.Point(192, 509);
+            this.Guzik_dodak.Name = "Guzik_dodak";
+            this.Guzik_dodak.Size = new System.Drawing.Size(133, 42);
+            this.Guzik_dodak.TabIndex = 12;
+            this.Guzik_dodak.Text = "Dodaj";
+            this.Guzik_dodak.UseVisualStyleBackColor = true;
+            this.Guzik_dodak.Click += new System.EventHandler(this.Guzik_dodak_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(806, 591);
+            this.Controls.Add(this.Guzik_dodak);
             this.Controls.Add(this.insertRecordButton);
-            this.Controls.Add(this.phoneNumberInsLabel);
-            this.Controls.Add(this.phoneNumberInsText);
-            this.Controls.Add(this.emailAddressInsLabel);
-            this.Controls.Add(this.emailAddressInsText);
-            this.Controls.Add(this.lastNameInsLabel);
-            this.Controls.Add(this.lastNameInsText);
-            this.Controls.Add(this.firstNameInsLabel);
-            this.Controls.Add(this.firstNameInsText);
+            this.Controls.Add(this.nazwa_naped);
+            this.Controls.Add(this.okno_naped);
+            this.Controls.Add(this.nazwa_kolor);
+            this.Controls.Add(this.okno_kolor);
+            this.Controls.Add(this.nazwa_rok);
+            this.Controls.Add(this.okno_rok);
+            this.Controls.Add(this.nazwa_marka);
+            this.Controls.Add(this.okno_marka);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.okno_szukaj);
@@ -183,15 +197,16 @@
         private System.Windows.Forms.TextBox okno_szukaj;
         private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Label firstNameInsLabel;
-        private System.Windows.Forms.TextBox firstNameInsText;
-        private System.Windows.Forms.Label lastNameInsLabel;
-        private System.Windows.Forms.TextBox lastNameInsText;
-        private System.Windows.Forms.Label emailAddressInsLabel;
-        private System.Windows.Forms.TextBox emailAddressInsText;
-        private System.Windows.Forms.Label phoneNumberInsLabel;
-        private System.Windows.Forms.TextBox phoneNumberInsText;
+        private System.Windows.Forms.Label nazwa_marka;
+        private System.Windows.Forms.TextBox okno_marka;
+        private System.Windows.Forms.Label nazwa_rok;
+        private System.Windows.Forms.TextBox okno_rok;
+        private System.Windows.Forms.Label nazwa_kolor;
+        private System.Windows.Forms.TextBox okno_kolor;
+        private System.Windows.Forms.Label nazwa_naped;
+        private System.Windows.Forms.TextBox okno_naped;
         private System.Windows.Forms.Button insertRecordButton;
+        private System.Windows.Forms.Button Guzik_dodak;
     }
 }
 

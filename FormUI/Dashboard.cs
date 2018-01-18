@@ -52,5 +52,40 @@ namespace FormUI
         {
 
         }
+
+        private void firstNameInsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastNameInsText_TextChanged(object sender, EventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 8)
+            {
+
+
+                e.Handled = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Prosze wprowadzic jedynie rok.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                e.Handled = true;
+
+            }
+
+        }
+
+        private void Guzik_dodak_Click(object sender, EventArgs e)
+        {
+            Dostep db = new Dostep();
+
+            db.InsertAutko(okno_marka.Text, okno_rok.Text, okno_kolor.Text, okno_naped.Text);
+
+            okno_marka.Text = "";
+            okno_rok.Text = "";
+            okno_kolor.Text = "";
+            okno_naped.Text = "";
+        }
     }
 }
