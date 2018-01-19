@@ -136,5 +136,10 @@ namespace FormUI
         {
 
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

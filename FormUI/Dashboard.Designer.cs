@@ -45,6 +45,7 @@
             // 
             // okno_wynik
             // 
+            this.okno_wynik.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.okno_wynik.FormattingEnabled = true;
             this.okno_wynik.ItemHeight = 25;
             this.okno_wynik.Location = new System.Drawing.Point(21, 145);
@@ -55,6 +56,7 @@
             // 
             // okno_szukaj
             // 
+            this.okno_szukaj.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.okno_szukaj.Location = new System.Drawing.Point(222, 53);
             this.okno_szukaj.Name = "okno_szukaj";
             this.okno_szukaj.Size = new System.Drawing.Size(197, 31);
@@ -64,6 +66,7 @@
             // Wprowadz_marke
             // 
             this.Wprowadz_marke.AutoSize = true;
+            this.Wprowadz_marke.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Wprowadz_marke.Location = new System.Drawing.Point(38, 53);
             this.Wprowadz_marke.Name = "Wprowadz_marke";
             this.Wprowadz_marke.Size = new System.Drawing.Size(178, 25);
@@ -73,17 +76,20 @@
             // 
             // Guzik_szukaj
             // 
+            this.Guzik_szukaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Guzik_szukaj.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Guzik_szukaj.Location = new System.Drawing.Point(425, 47);
             this.Guzik_szukaj.Name = "Guzik_szukaj";
             this.Guzik_szukaj.Size = new System.Drawing.Size(133, 42);
             this.Guzik_szukaj.TabIndex = 3;
             this.Guzik_szukaj.Text = "Search";
-            this.Guzik_szukaj.UseVisualStyleBackColor = true;
+            this.Guzik_szukaj.UseVisualStyleBackColor = false;
             this.Guzik_szukaj.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // nazwa_marka
             // 
             this.nazwa_marka.AutoSize = true;
+            this.nazwa_marka.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.nazwa_marka.Location = new System.Drawing.Point(38, 356);
             this.nazwa_marka.Name = "nazwa_marka";
             this.nazwa_marka.Size = new System.Drawing.Size(72, 25);
@@ -93,6 +99,7 @@
             // 
             // okno_marka
             // 
+            this.okno_marka.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.okno_marka.Location = new System.Drawing.Point(254, 350);
             this.okno_marka.Name = "okno_marka";
             this.okno_marka.Size = new System.Drawing.Size(197, 31);
@@ -102,6 +109,7 @@
             // nazwa_rok
             // 
             this.nazwa_rok.AutoSize = true;
+            this.nazwa_rok.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nazwa_rok.Location = new System.Drawing.Point(38, 393);
             this.nazwa_rok.Name = "nazwa_rok";
             this.nazwa_rok.Size = new System.Drawing.Size(42, 25);
@@ -110,6 +118,7 @@
             // 
             // okno_rok
             // 
+            this.okno_rok.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.okno_rok.Location = new System.Drawing.Point(254, 387);
             this.okno_rok.Name = "okno_rok";
             this.okno_rok.Size = new System.Drawing.Size(197, 31);
@@ -119,6 +128,7 @@
             // nazwa_kolor
             // 
             this.nazwa_kolor.AutoSize = true;
+            this.nazwa_kolor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nazwa_kolor.Location = new System.Drawing.Point(38, 430);
             this.nazwa_kolor.Name = "nazwa_kolor";
             this.nazwa_kolor.Size = new System.Drawing.Size(59, 25);
@@ -127,6 +137,7 @@
             // 
             // okno_kolor
             // 
+            this.okno_kolor.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.okno_kolor.Location = new System.Drawing.Point(254, 424);
             this.okno_kolor.Name = "okno_kolor";
             this.okno_kolor.Size = new System.Drawing.Size(197, 31);
@@ -136,6 +147,7 @@
             // nazwa_naped
             // 
             this.nazwa_naped.AutoSize = true;
+            this.nazwa_naped.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nazwa_naped.Location = new System.Drawing.Point(38, 467);
             this.nazwa_naped.Name = "nazwa_naped";
             this.nazwa_naped.Size = new System.Drawing.Size(210, 25);
@@ -144,6 +156,7 @@
             // 
             // okno_naped
             // 
+            this.okno_naped.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.okno_naped.Location = new System.Drawing.Point(254, 461);
             this.okno_naped.Name = "okno_naped";
             this.okno_naped.Size = new System.Drawing.Size(197, 31);
@@ -152,18 +165,21 @@
             // 
             // Guzik_dodak
             // 
+            this.Guzik_dodak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Guzik_dodak.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Guzik_dodak.Location = new System.Drawing.Point(192, 509);
             this.Guzik_dodak.Name = "Guzik_dodak";
             this.Guzik_dodak.Size = new System.Drawing.Size(133, 42);
             this.Guzik_dodak.TabIndex = 12;
             this.Guzik_dodak.Text = "Dodaj";
-            this.Guzik_dodak.UseVisualStyleBackColor = true;
+            this.Guzik_dodak.UseVisualStyleBackColor = false;
             this.Guzik_dodak.Click += new System.EventHandler(this.Guzik_dodak_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(806, 591);
             this.Controls.Add(this.Guzik_dodak);
             this.Controls.Add(this.nazwa_naped);
@@ -182,6 +198,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Dashboard";
             this.Text = "SQL Data Access Demo";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
