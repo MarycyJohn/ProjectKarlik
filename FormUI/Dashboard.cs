@@ -8,6 +8,8 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace FormUI
 {
@@ -129,7 +131,7 @@ namespace FormUI
 
         private void okno_wynik_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Wprowadz_marke_Click(object sender, EventArgs e)
@@ -151,6 +153,12 @@ namespace FormUI
         {
             Kontakty pokaz_kontakty = new Kontakty();
             pokaz_kontakty.Show();
+
+            
+
+
+
+
         }
     }
 }

@@ -34,6 +34,22 @@ namespace FormUI
                 connection.Execute("dbo.Autka_wprowadz @Marka, @Rok, @Kolor, @Naped_4x4", auto);
             }
         }
+        public void Lista_kontaktow(string tekst)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Support.CnnVal("Pew")))
+            {
+                //var output = connection.Query<Autko>($"select * from auta where marka = '{ marka }'").ToList();
+                
+                var output = connection.Execute("dbo.Lista_kontaktow", tekst);
+               
+
+
+            }
+        }
+
+
+
+
     } }
                 /*
        using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Support.CnnVal("Pew")))
