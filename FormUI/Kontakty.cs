@@ -25,7 +25,7 @@ namespace FormUI
         private void Kontakty_Load(object sender, EventArgs e)
         {
             kontakty_okno.DataSource = GetData();
-            kontakty_okno.DisplayMember = "Nazwisko";
+            kontakty_okno.DisplayMember = "email";
             
         }
 

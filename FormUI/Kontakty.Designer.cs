@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.kontakty_okno = new System.Windows.Forms.ListBox();
             this.okno_szukaj_kontakty = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.kontaktyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kontaktyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kontaktyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kontaktyBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -41,19 +41,29 @@
             // kontakty_okno
             // 
             this.kontakty_okno.FormattingEnabled = true;
-            this.kontakty_okno.Location = new System.Drawing.Point(95, 55);
+            this.kontakty_okno.Location = new System.Drawing.Point(30, 77);
             this.kontakty_okno.Name = "kontakty_okno";
-            this.kontakty_okno.Size = new System.Drawing.Size(542, 368);
+            this.kontakty_okno.Size = new System.Drawing.Size(247, 394);
             this.kontakty_okno.TabIndex = 0;
             // 
             // okno_szukaj_kontakty
             // 
             this.okno_szukaj_kontakty.FormattingEnabled = true;
-            this.okno_szukaj_kontakty.Location = new System.Drawing.Point(238, 19);
+            this.okno_szukaj_kontakty.Location = new System.Drawing.Point(155, 10);
             this.okno_szukaj_kontakty.Name = "okno_szukaj_kontakty";
             this.okno_szukaj_kontakty.Size = new System.Drawing.Size(230, 30);
             this.okno_szukaj_kontakty.TabIndex = 2;
             this.okno_szukaj_kontakty.SelectedIndexChanged += new System.EventHandler(this.okno_szukaj_kontakty_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(9, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 18);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Szukaj po nazwisku";
             // 
             // kontaktyBindingSource
             // 
@@ -63,21 +73,11 @@
             // 
             this.kontaktyBindingSource1.DataSource = typeof(FormUI.Kontakty);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(92, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Szukaj po nazwisku";
-            // 
             // Kontakty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 590);
+            this.ClientSize = new System.Drawing.Size(398, 486);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.okno_szukaj_kontakty);
             this.Controls.Add(this.kontakty_okno);
