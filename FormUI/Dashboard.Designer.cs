@@ -41,6 +41,7 @@
             this.nazwa_naped = new System.Windows.Forms.Label();
             this.okno_naped = new System.Windows.Forms.TextBox();
             this.Guzik_dodak = new System.Windows.Forms.Button();
+            this.Kontakty_guzik = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // okno_wynik
@@ -175,12 +176,25 @@
             this.Guzik_dodak.UseVisualStyleBackColor = false;
             this.Guzik_dodak.Click += new System.EventHandler(this.Guzik_dodak_Click);
             // 
+            // Kontakty_guzik
+            // 
+            this.Kontakty_guzik.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Kontakty_guzik.Location = new System.Drawing.Point(682, 552);
+            this.Kontakty_guzik.Name = "Kontakty_guzik";
+            this.Kontakty_guzik.Size = new System.Drawing.Size(75, 27);
+            this.Kontakty_guzik.TabIndex = 14;
+            this.Kontakty_guzik.Text = "Kontakty";
+            this.Kontakty_guzik.UseVisualStyleBackColor = true;
+            this.Kontakty_guzik.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Dashboard
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(806, 591);
+            this.ClientSize = new System.Drawing.Size(775, 591);
+            this.Controls.Add(this.Kontakty_guzik);
             this.Controls.Add(this.Guzik_dodak);
             this.Controls.Add(this.nazwa_naped);
             this.Controls.Add(this.okno_naped);
@@ -219,6 +233,7 @@
         private System.Windows.Forms.Label nazwa_naped;
         private System.Windows.Forms.TextBox okno_naped;
         private System.Windows.Forms.Button Guzik_dodak;
+        private System.Windows.Forms.Button Kontakty_guzik;
     }
 }
 

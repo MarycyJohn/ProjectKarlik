@@ -141,5 +141,16 @@ namespace FormUI
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Kontakty pokaz_kontakty = new Kontakty();
+            pokaz_kontakty.Show();
+        }
     }
 }
