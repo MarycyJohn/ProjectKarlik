@@ -25,6 +25,7 @@ namespace FormUI
         private void Kontakty_Load(object sender, EventArgs e)
         {
             kontakty_okno.DataSource = GetData();
+            kontakty_okno.DisplayMember = "Nazwisko";
             
         }
 
@@ -32,6 +33,7 @@ namespace FormUI
         {
          
             dtKontakty = new DataTable();
+       
 
             string connectionString = ConfigurationManager.ConnectionStrings["Pew"].ConnectionString;
             {
