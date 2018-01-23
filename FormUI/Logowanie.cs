@@ -31,6 +31,21 @@ namespace FormUI
 
         private void guzik_login_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection("Data Source=SRV-SQL5;Initial Catalog=SkupAut;Integrated Security=True");
+            SqlDataAdapter sda = new SqlDataAdapter("Select Rola from dbo.Tabela_uzytkownicy where [Username] ='" + okienko_login.Text + "' and [Password] = '" +  okienko_haslo.Text + "'  ", con);
+            DataTable dt = new System.Data.DataTable();
+            sda.Fill(dt);
+            if(dt.Rows.Count == 1)
+            {
+                this.Hide();
+                MDIParent1 ss = new MDIParent1();
+                ss.Show();
+
+            }
+        }
+
+        private void okno_login_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

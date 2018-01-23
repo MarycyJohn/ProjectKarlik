@@ -64,6 +64,11 @@ namespace FormUI
             DataView dvKontakty = dtKontakty.DefaultView;
             dvKontakty.RowFilter = "Nazwisko LIKE '%" + okno_szukaj_kontakty.Text + "%'";
         }
+
+        private void okno_szukaj_kontakty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }  //tymczasowo
 

@@ -42,6 +42,7 @@
             this.okno_naped = new System.Windows.Forms.TextBox();
             this.Guzik_dodak = new System.Windows.Forms.Button();
             this.Kontakty_guzik = new System.Windows.Forms.Button();
+            this.wyjscie_main = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // okno_wynik
@@ -179,7 +180,7 @@
             // Kontakty_guzik
             // 
             this.Kontakty_guzik.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Kontakty_guzik.Location = new System.Drawing.Point(682, 552);
+            this.Kontakty_guzik.Location = new System.Drawing.Point(682, 305);
             this.Kontakty_guzik.Name = "Kontakty_guzik";
             this.Kontakty_guzik.Size = new System.Drawing.Size(75, 27);
             this.Kontakty_guzik.TabIndex = 14;
@@ -187,13 +188,23 @@
             this.Kontakty_guzik.UseVisualStyleBackColor = true;
             this.Kontakty_guzik.Click += new System.EventHandler(this.button1_Click);
             // 
+            // wyjscie_main
+            // 
+            this.wyjscie_main.Location = new System.Drawing.Point(667, 545);
+            this.wyjscie_main.Name = "wyjscie_main";
+            this.wyjscie_main.Size = new System.Drawing.Size(96, 34);
+            this.wyjscie_main.TabIndex = 15;
+            this.wyjscie_main.Text = "Wyjście";
+            this.wyjscie_main.UseVisualStyleBackColor = true;
+            this.wyjscie_main.Click += new System.EventHandler(this.wyjscie_main_Click);
+            // 
             // Dashboard
             // 
-            this.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(775, 591);
+            this.Controls.Add(this.wyjscie_main);
             this.Controls.Add(this.Kontakty_guzik);
             this.Controls.Add(this.Guzik_dodak);
             this.Controls.Add(this.nazwa_naped);
@@ -209,6 +220,7 @@
             this.Controls.Add(this.okno_szukaj);
             this.Controls.Add(this.okno_wynik);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Dashboard";
             this.Text = "SQL Data Access Demo";
@@ -234,6 +246,7 @@
         private System.Windows.Forms.TextBox okno_naped;
         private System.Windows.Forms.Button Guzik_dodak;
         private System.Windows.Forms.Button Kontakty_guzik;
+        private System.Windows.Forms.Button wyjscie_main;
     }
 }
 

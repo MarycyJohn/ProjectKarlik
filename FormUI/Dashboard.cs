@@ -160,5 +160,10 @@ namespace FormUI
 
 
         }
+
+        private void wyjscie_main_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
