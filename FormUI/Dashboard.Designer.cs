@@ -43,6 +43,7 @@
             this.Guzik_dodak = new System.Windows.Forms.Button();
             this.Kontakty_guzik = new System.Windows.Forms.Button();
             this.wyjscie_main = new System.Windows.Forms.Button();
+            this.Status_label_dashboard = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // okno_wynik
@@ -169,9 +170,9 @@
             // 
             this.Guzik_dodak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Guzik_dodak.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Guzik_dodak.Location = new System.Drawing.Point(192, 509);
+            this.Guzik_dodak.Location = new System.Drawing.Point(364, 498);
             this.Guzik_dodak.Name = "Guzik_dodak";
-            this.Guzik_dodak.Size = new System.Drawing.Size(133, 42);
+            this.Guzik_dodak.Size = new System.Drawing.Size(87, 42);
             this.Guzik_dodak.TabIndex = 12;
             this.Guzik_dodak.Text = "Dodaj";
             this.Guzik_dodak.UseVisualStyleBackColor = false;
@@ -198,12 +199,24 @@
             this.wyjscie_main.UseVisualStyleBackColor = true;
             this.wyjscie_main.Click += new System.EventHandler(this.wyjscie_main_Click);
             // 
+            // Status_label_dashboard
+            // 
+            this.Status_label_dashboard.AutoSize = true;
+            this.Status_label_dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Status_label_dashboard.Location = new System.Drawing.Point(17, 562);
+            this.Status_label_dashboard.Name = "Status_label_dashboard";
+            this.Status_label_dashboard.Size = new System.Drawing.Size(56, 20);
+            this.Status_label_dashboard.TabIndex = 16;
+            this.Status_label_dashboard.Text = "Status";
+            this.Status_label_dashboard.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(775, 591);
+            this.Controls.Add(this.Status_label_dashboard);
             this.Controls.Add(this.wyjscie_main);
             this.Controls.Add(this.Kontakty_guzik);
             this.Controls.Add(this.Guzik_dodak);
@@ -247,6 +260,7 @@
         private System.Windows.Forms.Button Guzik_dodak;
         private System.Windows.Forms.Button Kontakty_guzik;
         private System.Windows.Forms.Button wyjscie_main;
+        private System.Windows.Forms.Label Status_label_dashboard;
     }
 }
 

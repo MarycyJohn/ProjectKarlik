@@ -141,7 +141,7 @@ namespace FormUI
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            Status_label_dashboard.Text = "Jesteś zalogowany jako: " +((Form)this.MdiParent).Controls["Status_label"].Text;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -164,6 +164,11 @@ namespace FormUI
         private void wyjscie_main_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

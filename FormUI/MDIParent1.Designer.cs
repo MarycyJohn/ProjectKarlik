@@ -35,6 +35,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.biodataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Status_label = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -43,9 +44,9 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 565);
+            this.statusStrip.Location = new System.Drawing.Point(0, 620);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(783, 22);
+            this.statusStrip.Size = new System.Drawing.Size(801, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -61,7 +62,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(783, 24);
+            this.menuStrip.Size = new System.Drawing.Size(801, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -80,11 +81,24 @@
             this.biodataToolStripMenuItem.Text = "Główna";
             this.biodataToolStripMenuItem.Click += new System.EventHandler(this.biodataToolStripMenuItem_Click);
             // 
+            // Status_label
+            // 
+            this.Status_label.AutoSize = true;
+            this.Status_label.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Status_label.Location = new System.Drawing.Point(544, 87);
+            this.Status_label.Name = "Status_label";
+            this.Status_label.Size = new System.Drawing.Size(70, 30);
+            this.Status_label.TabIndex = 4;
+            this.Status_label.Text = "Status";
+            this.Status_label.Visible = false;
+            this.Status_label.Click += new System.EventHandler(this.Status_label_Click);
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 587);
+            this.ClientSize = new System.Drawing.Size(801, 642);
+            this.Controls.Add(this.Status_label);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
@@ -108,6 +122,7 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem biodataToolStripMenuItem;
+        private System.Windows.Forms.Label Status_label;
     }
 }
 

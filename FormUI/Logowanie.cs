@@ -38,8 +38,9 @@ namespace FormUI
             if(dt.Rows.Count == 1)
             {
                 this.Hide();
-                MDIParent1 ss = new MDIParent1();
+                MDIParent1 ss = new MDIParent1(dt.Rows[0][0].ToString());
                 ss.Show();
+                //((Form)ss).Controls["Status_label"].Text = dt.Rows[0][0].ToString();
 
             }
         }

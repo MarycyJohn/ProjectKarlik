@@ -14,9 +14,10 @@ namespace FormUI
     {
         
 
-        public MDIParent1()
+        public MDIParent1(string role)
         {
             InitializeComponent();
+            Status_label.Text = role;
         }
 
 
@@ -38,5 +39,9 @@ namespace FormUI
 
         }
 
+        private void Status_label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
