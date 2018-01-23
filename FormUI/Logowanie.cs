@@ -49,5 +49,19 @@ namespace FormUI
         {
 
         }
+
+        private void Tab(object sender, KeyEventArgs e)
+        {
+                if (e.KeyCode.Equals(Keys.Tab))
+                {
+                    okienko_haslo.Focus();
+                }
+            }
+
+        private void Tab(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
-}
+    }
+
