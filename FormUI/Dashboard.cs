@@ -142,6 +142,11 @@ namespace FormUI
         private void Dashboard_Load(object sender, EventArgs e)
         {
             Status_label_dashboard.Text = "Jesteś zalogowany jako: " +((Form)this.MdiParent).Controls["Status_label"].Text;
+            if(((Form)this.MdiParent).Controls["Status_label"].Text != "Admin")
+            {
+                Guzik_dodak.Enabled = false;
+            }
+          
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

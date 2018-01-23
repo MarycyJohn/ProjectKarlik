@@ -24,6 +24,8 @@ namespace FormUI
 
         private void Kontakty_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'skupAutDataSet.Kontakty' table. You can move, or remove it, as needed.
+            this.kontaktyTableAdapter.Fill(this.skupAutDataSet.Kontakty);
             kontakty_okno.DataSource = GetData();
             kontakty_okno.DisplayMember = "email";
             
